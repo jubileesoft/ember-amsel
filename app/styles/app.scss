@@ -1,0 +1,25 @@
+html,
+body {
+  --primary-color: #ddc686;
+  --accent-color: #797979;
+  --accent-light-color: #d7d7d7;
+  --background-color: #fafafa;
+  --card-color: #393939;
+  --text-color: #ffffff;
+  --text-color-on-primary: #1d1a11;
+  --text-color-on-accent: #ffffff;
+
+
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  overflow-y: hidden;
+
+  background: var(--background-color);
+  color: var(--text-color);
+}
