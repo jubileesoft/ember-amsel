@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ember-amsel',
     environment,
@@ -13,14 +13,18 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+        Date: false,
+      },
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    apollo: {
+      apiURL: 'http://localhost:3000/graphql',
+    },
   };
 
   if (environment === 'development') {
@@ -29,6 +33,10 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV['ember-apollo-client'] = {
+      connectToDevTools: true
+    };
   }
 
   if (environment === 'test') {

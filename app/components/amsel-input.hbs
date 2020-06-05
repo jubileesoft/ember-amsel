@@ -1,0 +1,12 @@
+<div style="position: relative;">
+  <input type="text" value={{@value}} {{on "input" (perform this.onInputTask)}} {{on "key-down" this.onKeyDown}} />
+  {{#if this.hasFoundItems}}
+    <div local-class="found-items">
+      {{#each this.foundItems as |foundItem|}}
+        <div>
+          {{foundItem.email}}
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>

@@ -6,8 +6,10 @@
     {{on "click" this.toggleIsExpanded}}
   />
   <NavbarIcon @icon="dove" @text="Apps" @route="protected.admin-apps" @isExpanded={{this.isExpanded}} />
-  <NavbarIcon @icon="user-friends" @text="Users" @route="protected.admin-users" @isExpanded={{this.isExpanded}} />
+  <NavbarIcon @icon="user-cog" @text="Users" @route="protected.admin-users" @isExpanded={{this.isExpanded}} />
   <NavbarIcon @icon="cog" @text="System" @route="protected.admin-system" @isExpanded={{this.isExpanded}} />
   
-  <NavbarIcon @icon="user-lock" @text="User Claims" @route="protected.admin-system" @isExpanded={{this.isExpanded}} />
+  <NavbarIcon @icon="user-lock" @text="User Claims" @route="protected.app.user-claims" @isExpanded={{this.isExpanded}} />
+  <NavbarIcon @icon="tools" @text="App Management" @route="protected.app.manage" @isExpanded={{this.isExpanded}} />
+ 
 </div>

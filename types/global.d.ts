@@ -4,3 +4,8 @@ declare module 'ember-amsel/templates/*' {
   const tmpl: TemplateFactory;
   export default tmpl;
 }
+
+declare module '*.graphql' {
+  const doc: import('graphql').DocumentNode;
+  export default doc;
+}

@@ -20,6 +20,7 @@
     "test:ember": "ember test"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
     "@ember/optional-features": "^1.3.0",
     "@fortawesome/ember-fontawesome": "^0.2.1",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
@@ -33,6 +34,7 @@
     "@types/rsvp": "^4.0.3",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
+    "ember-apollo-client": "^2.1.0",
     "ember-auto-import": "^1.5.3",
     "ember-cli": "~3.18.0",
     "ember-cli-app-version": "^3.2.0",
@@ -45,10 +47,11 @@
     "ember-cli-typescript": "^3.1.3",
     "ember-cli-typescript-blueprints": "^3.0.0",
     "ember-cli-uglify": "^3.0.0",
+    "ember-concurrency": "^1.1.7",
     "ember-css-modules": "^1.3.1",
     "ember-css-modules-sass": "^1.1.0",
     "ember-export-application-global": "^2.0.1",
-    "ember-fetch": "^8.0.1",
+    "ember-fetch": "^6.3.1",
     "ember-load-initializers": "^2.1.1",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-qunit": "^4.6.0",
@@ -59,10 +62,12 @@
     "eslint": "^6.8.0",
     "eslint-plugin-ember": "^8.4.0",
     "eslint-plugin-node": "^11.1.0",
+    "graphql": "^14.0.2",
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "qunit-dom": "^1.2.0",
+    "rollup": "^2.13.1",
     "sass": "^1.26.7",
     "typescript": "^3.9.3"
   },
@@ -71,8 +76,5 @@
   },
   "ember": {
     "edition": "octane"
-  },
-  "peerDependencies": {
-    "@babel/core": "^7.0.0"
   }
 }
