@@ -10,6 +10,7 @@ interface AmselInputArgs {
   displayPropertyName?: string;
   delay?: number;
   onSelect?(itemIndex: number): void;
+  onChange?(newValue: string): void;
 }
 
 export default class AmselInput extends Component<AmselInputArgs> {
@@ -26,7 +27,6 @@ export default class AmselInput extends Component<AmselInputArgs> {
   }
 
   @(task(function* (event) {
-    console.log('oninput');
     yield timeout(this.delay);
     this.handleOnInput(event);
   }).restartable())
@@ -109,5 +109,14 @@ export default class AmselInput extends Component<AmselInputArgs> {
         }
         break;
     }
+  }
+
+  @action
+  onChange(event: UIEvent) {
+    if (!this.args.onChange) {
+      return;
+    }
+    const value = (event.target as HTMLInputElement).value;
+    this.args.onChange(value);
   }
 }

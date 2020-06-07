@@ -1,0 +1,7 @@
+query getApps {
+  getApps {
+    id
+    name
+    owner
+  }
+}

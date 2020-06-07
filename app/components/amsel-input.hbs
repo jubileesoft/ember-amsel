@@ -4,6 +4,7 @@
     value={{if @displayPropertyName (get @value @displayPropertyName) @value}}
     {{on "input" (perform this.onInputTask)}}
     {{on "keydown" this.onKeyDown}}
+    {{on "change" this.onChange}}
   />
   {{#if this.hasFoundItems}}
     <div local-class="found-items">
