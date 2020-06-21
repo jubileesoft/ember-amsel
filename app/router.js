@@ -14,11 +14,7 @@ Router.map(function () {
       this.route('new');
     });
     this.route('admin-system');
-    this.route('admin-users', function () {
-      this.route('id', { path: ':user_id' });
-      this.route('new');
-    });
-    this.route('app', function () {
+    this.route('app', { path: ':app_id' }, function () {
       this.route('user-claims');
       this.route('manage');
     });

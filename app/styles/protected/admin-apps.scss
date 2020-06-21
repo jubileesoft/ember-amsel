@@ -5,7 +5,7 @@
 }
 
 .admin-apps .list-area {
-  border-right: 1px gray solid;
+  border-right: 1px var(--text-color) solid;
   min-width: 200px;
   display: flex;
   flex-direction: column;
@@ -15,5 +15,23 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: var(--text-color);
+      min-height: 36px;
+      padding: 0 8px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &:global(.active) {
+        background: var(--accent-color);
+      }
+    }
+
+    a:hover {
+      background: var(--accent-color);
+    }
   }
 }

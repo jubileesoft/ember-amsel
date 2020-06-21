@@ -1,0 +1,7 @@
+query getApp($id: String!) {
+  getApp(id: $id) {
+    id
+    name
+    owner
+  }
+}
