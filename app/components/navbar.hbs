@@ -1,7 +1,7 @@
 <div local-class="root">
   <NavbarIcon
     @icon="bars"
-    @isExpanded={{this.isExpanded}}
+    @isExpanded={{this.persistence.navbarIsExpanded}}
     type="button"
     {{on "click" this.toggleIsExpanded}}
   />
@@ -9,13 +9,13 @@
     @icon="dove"
     @text="Apps"
     @route="protected.admin-apps"
-    @isExpanded={{this.isExpanded}}
+    @isExpanded={{this.persistence.navbarIsExpanded}}
   />
   <NavbarIcon
     @icon="cog"
     @text="System"
     @route="protected.admin-system"
-    @isExpanded={{this.isExpanded}}
+    @isExpanded={{this.persistence.navbarIsExpanded}}
   />
 
   <NavbarIcon
@@ -23,13 +23,13 @@
     @text="User Claims"
     @route="protected.app.user-claims"
     @model={{this.persistence.selectedAppId}}
-    @isExpanded={{this.isExpanded}}
+    @isExpanded={{this.persistence.navbarIsExpanded}}
   />
   <NavbarIcon
     @icon="tools"
     @text="App Management"
     @route="protected.app.manage"
     @model={{this.persistence.selectedAppId}}
-    @isExpanded={{this.isExpanded}}
+    @isExpanded={{this.persistence.navbarIsExpanded}}
   />
 </div>

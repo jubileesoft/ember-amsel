@@ -3,5 +3,6 @@ query getApp($id: String!) {
     id
     name
     owner
+    apiKey1CreatedAt
   }
 }

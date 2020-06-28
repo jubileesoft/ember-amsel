@@ -3,5 +3,6 @@ query getApps {
     id
     name
     owner
+    apiKey1CreatedAt
   }
 }

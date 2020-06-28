@@ -16,7 +16,9 @@ Router.map(function () {
     this.route('admin-system');
     this.route('app', { path: ':app_id' }, function () {
       this.route('user-claims');
-      this.route('manage');
+      this.route('manage', function() {
+        this.route('api');
+      });
     });
   });
 });
