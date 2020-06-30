@@ -1,0 +1,7 @@
+<div local-class="protected-app-manage-privileges">
+  <div>
+    <AmselInput @onChange={{fn (mut this.privilegeShort)}} />
+    <AmselInput @onChange={{fn (mut this.privilegeName)}} />
+    <div class="button" {{on "click" (fn this.addPrivilege @model.app.id)}}>Add Privilege</div>
+  </div>
+</div>

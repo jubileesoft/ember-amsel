@@ -18,6 +18,7 @@ Router.map(function () {
       this.route('user-claims');
       this.route('manage', function() {
         this.route('api');
+        this.route('privileges');
       });
     });
   });

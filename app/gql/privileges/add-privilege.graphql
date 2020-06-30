@@ -1,0 +1,11 @@
+mutation addPrivilege($appId: String!, $input: AddPrivilegeInput!) {
+  addPrivilege(appId: $appId, input: $input) {
+    id
+    app {
+      id
+    }
+    name
+    short
+    tags
+  }
+}

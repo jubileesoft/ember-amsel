@@ -1,0 +1,11 @@
+query getPrivileges($appId: String) {
+  getPrivileges(appId: $appId) {
+    id
+    app {
+      id
+    }
+    name
+    short
+    tags
+  }
+}

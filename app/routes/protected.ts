@@ -3,13 +3,11 @@ import { queryManager } from 'ember-apollo-client';
 import { inject as service } from '@ember/service';
 import getAppsQuery from 'ember-amsel/gql/apps/get-apps.graphql';
 import Persistence from 'ember-amsel/services/persistence';
-import Recorder from 'ember-amsel/services/recorder';
 
 export default class Protected extends Route.extend({
   // anything which *must* be merged to prototype here
 }) {
   @service persistence!: Persistence;
-  @service recorder!: Recorder;
   @queryManager apollo: any;
 
   async model() {
