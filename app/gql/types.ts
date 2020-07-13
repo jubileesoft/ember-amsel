@@ -22,3 +22,9 @@ export interface AddPrivilegeInput {
   short?: string;
   tags?: string[];
 }
+
+export interface UpdatePrivilegeInput {
+  name?: string;
+  short?: string;
+  tags?: string[];
+}

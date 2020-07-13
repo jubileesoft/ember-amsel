@@ -1,0 +1,11 @@
+mutation updatePrivilege($privilegeId: String!, $input: UpdatePrivilegeInput!) {
+  updatePrivilege(privilegeId: $privilegeId, input: $input) {
+    id
+    app {
+      id
+    }
+    name
+    short
+    tags
+  }
+}
