@@ -7,5 +7,10 @@
   .table-wrapper {
     height: 100%;
     overflow-y: scroll;
+
+    .actions {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }

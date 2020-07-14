@@ -5,6 +5,7 @@ mutation updatePrivilege($privilegeId: String!, $input: UpdatePrivilegeInput!) {
       id
     }
     name
+    order
     short
     tags
   }

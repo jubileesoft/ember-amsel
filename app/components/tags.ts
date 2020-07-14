@@ -36,7 +36,11 @@ export default class TagsInput extends Component<TagsInputArgs> {
     this.isEditMode = false;
 
     if (tag) {
-      this.args.onChange(this.args.selectedTags.concat(tag));
+      const returnArray = Array.isArray(this.args.selectedTags)
+        ? this.args.selectedTags.concat(tag).sort()
+        : [tag];
+
+      this.args.onChange(returnArray);
     }
 
     next(this, () => {

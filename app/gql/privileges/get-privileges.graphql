@@ -5,6 +5,7 @@ query getPrivileges($appId: String) {
       id
     }
     name
+    order
     short
     tags
   }

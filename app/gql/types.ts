@@ -13,6 +13,7 @@ export interface Privilege {
   id: string;
   app: App;
   name: string;
+  order: string;
   short?: string;
   tags?: string[];
 }

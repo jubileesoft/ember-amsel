@@ -5,6 +5,7 @@ mutation addPrivilege($appId: String!, $input: AddPrivilegeInput!) {
       id
     }
     name
+    order
     short
     tags
   }
