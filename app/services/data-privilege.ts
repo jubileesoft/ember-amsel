@@ -6,6 +6,7 @@ import getPrivilegesQuery from 'ember-amsel/gql/privileges/get-privileges.graphq
 import UpdatePrivilegeMutation from 'ember-amsel/gql/privileges/update-privilege.graphql';
 import DeletePrivilegeMutation from 'ember-amsel/gql/privileges/delete-privilege.graphql';
 import OrderUpPrivilegeMutation from 'ember-amsel/gql/privileges/order-up-privilege.graphql';
+import OrderDownPrivilegeMutation from 'ember-amsel/gql/privileges/order-down-privilege.graphql';
 import ApolloService from 'ember-amsel/services/apollo';
 import Recorder, { RecordType } from 'ember-amsel/services/recorder';
 
@@ -92,7 +93,7 @@ export default class DataPrivilege extends Service.extend({
         {
           mutation: OrderUpPrivilegeMutation,
           variables,
-          update: (store: any, { data: { upOrderPrivilege } }) => {
+          update: (store: any, { data: { orderUpPrivilege } }) => {
             const variables = {
               appId: privilege.app.id,
             };
@@ -118,6 +119,51 @@ export default class DataPrivilege extends Service.extend({
           },
         },
         'orderUpPrivilege',
+      );
+    } catch (resultError) {
+      const message = this.apollo.errorResultToString(resultError);
+      this.recorder.addRecord(RecordType.ERROR, message);
+      throw resultError;
+    }
+  }
+
+  @action
+  async orderDown(privilege: Privilege) {
+    const variables = {
+      privilegeId: privilege.id,
+    };
+
+    try {
+      await this.apollo.mutate(
+        {
+          mutation: OrderDownPrivilegeMutation,
+          variables,
+          update: (store: any, { data: { orderDownPrivilege } }) => {
+            const variables = {
+              appId: privilege.app.id,
+            };
+            const data: { getPrivileges: Privilege[] } = store.readQuery({
+              query: getPrivilegesQuery,
+              variables,
+            });
+
+            const orderedArray = data.getPrivileges.sort((a, b) => {
+              if (a.order < b.order) {
+                return -1;
+              }
+              if (a.order > b.order) {
+                return 1;
+              }
+              return 0;
+            });
+            const newData = {
+              getPrivileges: orderedArray,
+            };
+
+            store.writeQuery({ query: getPrivilegesQuery, newData, variables });
+          },
+        },
+        'orderDownPrivilege',
       );
     } catch (resultError) {
       const message = this.apollo.errorResultToString(resultError);

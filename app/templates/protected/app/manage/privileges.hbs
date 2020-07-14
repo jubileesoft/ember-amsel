@@ -14,7 +14,15 @@
     </div>
   </div>
   <div local-class="table-wrapper">
-    <YetiTable @data={{@model.privileges}} as |table|>
+    <YetiTable
+      @theme={{
+        hash
+        table="yt-default-table"
+        thead="yt-default-thead"
+        tbodyRow="yt-default-tbodyRow"
+      }}
+      @data={{@model.privileges}} as |table|
+    >
       <table.header as |header|>
         <header.column @sortable={{false}} style="width: 100px;" />
         <header.column @prop="id">
@@ -35,17 +43,23 @@
           {{on "mouseover" (fn (mut this.mouseOverIndex) index)}}
           {{on "mouseleave" (fn (mut this.mouseOverIndex) null)}} as |row|
         >
-          <row.cell local-class="actions">
+          <row.cell>
             {{#if (eq index this.mouseOverIndex)}}
-              <Icon
-                @icon="angle-up"
-                {{on "click" (fn this.dataPrivilege.orderUp privilege)}}
-              />
-              <Icon @icon="angle-down" />
-              <Icon
-                @icon="times"
-                {{on "click" (fn this.dataPrivilege.delete privilege)}}
-              />
+            {{!-- {{#if true}} --}}
+              <div local-class="actions">
+                <Icon
+                  @icon="angle-up"
+                  {{on "click" (fn this.dataPrivilege.orderUp privilege)}}
+                />
+                <Icon
+                  @icon="angle-down"
+                  {{on "click" (fn this.dataPrivilege.orderDown privilege)}}
+                />
+                <Icon
+                  @icon="times"
+                  {{on "click" (fn this.dataPrivilege.delete privilege)}}
+                />
+              </div>
             {{/if}}
           </row.cell>
           <row.cell>
