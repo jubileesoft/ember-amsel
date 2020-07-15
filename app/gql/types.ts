@@ -29,3 +29,13 @@ export interface UpdatePrivilegeInput {
   short?: string;
   tags?: string[];
 }
+
+export interface PrivilegePool {
+  id: string;
+  app: App;
+  name: string;
+  oder: string;
+  privileges: Privilege[];
+  short?: string;
+  tags?: string;
+}
