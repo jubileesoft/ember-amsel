@@ -18,18 +18,20 @@
     @isExpanded={{this.persistence.navbarIsExpanded}}
   />
 
-  <NavbarIcon
-    @icon="user-lock"
-    @text="User Claims"
-    @route="protected.app.user-claims"
-    @model={{this.persistence.selectedAppId}}
-    @isExpanded={{this.persistence.navbarIsExpanded}}
-  />
-  <NavbarIcon
-    @icon="tools"
-    @text="App Management"
-    @route="protected.app.manage"
-    @model={{this.persistence.selectedAppId}}
-    @isExpanded={{this.persistence.navbarIsExpanded}}
-  />
+  {{#if this.persistence.selectedAppId}}
+    <NavbarIcon
+      @icon="user-lock"
+      @text="User Claims"
+      @route="protected.app.user-claims"
+      @model={{this.persistence.selectedAppId}}
+      @isExpanded={{this.persistence.navbarIsExpanded}}
+    />
+    <NavbarIcon
+      @icon="tools"
+      @text="App Management"
+      @route="protected.app.manage"
+      @model={{this.persistence.selectedAppId}}
+      @isExpanded={{this.persistence.navbarIsExpanded}}
+    />
+  {{/if}}
 </div>
