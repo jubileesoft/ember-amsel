@@ -1,6 +1,8 @@
 import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
-import RecorderService, { RecordType } from 'ember-amsel/services/recorder';
+import RecorderService, {
+  RecordType,
+} from 'greenlight-frontend/services/recorder';
 
 interface RecorderArgs {}
 

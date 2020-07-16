@@ -1,8 +1,8 @@
 import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
 import { queryManager } from 'ember-apollo-client';
-import getPrivilegesQuery from 'ember-amsel/gql/privileges/get-privileges.graphql';
-import { App, Privilege } from 'ember-amsel/gql/types';
+import getPrivilegesQuery from 'greenlight-frontend/gql/privileges/get-privileges.graphql';
+import { App, Privilege } from 'greenlight-frontend/gql/types';
 
 interface Model {
   privileges: Privilege[];

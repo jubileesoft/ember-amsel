@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 import { queryManager } from 'ember-apollo-client';
-import getAppQuery from 'ember-amsel/gql/apps/get-app.graphql';
+import getAppQuery from 'greenlight-frontend/gql/apps/get-app.graphql';
 
 interface Params {
   app_id: string;

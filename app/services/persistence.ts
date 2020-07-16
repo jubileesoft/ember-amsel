@@ -1,6 +1,6 @@
 import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
-import string2Boolean from 'ember-amsel/utils/string-to-boolean';
+import string2Boolean from 'greenlight-frontend/utils/string-to-boolean';
 
 const STORAGE = {
   SELECTEDAPPID: 'selectedAppId',

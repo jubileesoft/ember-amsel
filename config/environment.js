@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'ember-amsel',
+    modulePrefix: 'greenlight-frontend',
     environment,
     rootURL: '/',
     locationType: 'auto',

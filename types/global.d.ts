@@ -1,5 +1,5 @@
 // Types for compiled templates
-declare module 'ember-amsel/templates/*' {
+declare module 'greenlight-frontend/templates/*' {
   import { TemplateFactory } from 'htmlbars-inline-precompile';
   const tmpl: TemplateFactory;
   export default tmpl;

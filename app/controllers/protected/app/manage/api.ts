@@ -2,8 +2,8 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
-import CreateApiKey1Mutation from 'ember-amsel/gql/apps/create-app-api-key-1.graphql';
-import GetAppQuery from 'ember-amsel/gql/apps/get-app.graphql';
+import CreateApiKey1Mutation from 'greenlight-frontend/gql/apps/create-app-api-key-1.graphql';
+import GetAppQuery from 'greenlight-frontend/gql/apps/get-app.graphql';
 
 export default class ProtectedAppManageApi extends Controller.extend({
   // anything which *must* be merged to prototype here

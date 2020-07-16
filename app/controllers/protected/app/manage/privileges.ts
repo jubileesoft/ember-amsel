@@ -3,12 +3,12 @@ import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 //import { A } from '@ember/array';
-import addPrivilegeMutation from 'ember-amsel/gql/privileges/add-privilege.graphql';
-import { AddPrivilegeInput } from 'ember-amsel/gql/types';
+import addPrivilegeMutation from 'greenlight-frontend/gql/privileges/add-privilege.graphql';
+import { AddPrivilegeInput } from 'greenlight-frontend/gql/types';
 //import Ember from 'ember';
-import Recorder, { RecordType } from 'ember-amsel/services/recorder';
-import DataPrivilege from 'ember-amsel/services/data-privilege';
-import getPrivilegesQuery from 'ember-amsel/gql/privileges/get-privileges.graphql';
+import Recorder, { RecordType } from 'greenlight-frontend/services/recorder';
+import DataPrivilege from 'greenlight-frontend/services/data-privilege';
+import getPrivilegesQuery from 'greenlight-frontend/gql/privileges/get-privileges.graphql';
 
 export default class ProtectedAppManagePrivileges extends Controller.extend({
   // anything which *must* be merged to prototype here

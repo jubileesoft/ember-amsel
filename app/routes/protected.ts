@@ -1,8 +1,8 @@
 import Route from '@ember/routing/route';
 import { queryManager } from 'ember-apollo-client';
 import { inject as service } from '@ember/service';
-import getAppsQuery from 'ember-amsel/gql/apps/get-apps.graphql';
-import Persistence from 'ember-amsel/services/persistence';
+import getAppsQuery from 'greenlight-frontend/gql/apps/get-apps.graphql';
+import Persistence from 'greenlight-frontend/services/persistence';
 
 export default class Protected extends Route.extend({
   // anything which *must* be merged to prototype here

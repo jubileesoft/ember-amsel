@@ -21,10 +21,10 @@
     "module": "es6",
     "experimentalDecorators": true,
     "paths": {
-      "ember-amsel/tests/*": [
+      "greenlight-frontend/tests/*": [
         "tests/*"
       ],
-      "ember-amsel/*": [
+      "greenlight-frontend/*": [
         "app/*"
       ],
       "*": [

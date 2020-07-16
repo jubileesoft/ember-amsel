@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
-import Persistence from 'ember-amsel/services/persistence';
+import Persistence from 'greenlight-frontend/services/persistence';
 
 interface NavbarArgs {}
 

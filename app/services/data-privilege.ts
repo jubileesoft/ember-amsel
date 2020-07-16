@@ -1,14 +1,14 @@
 import Service from '@ember/service';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
-import { Privilege, UpdatePrivilegeInput } from 'ember-amsel/gql/types';
-import getPrivilegesQuery from 'ember-amsel/gql/privileges/get-privileges.graphql';
-import UpdatePrivilegeMutation from 'ember-amsel/gql/privileges/update-privilege.graphql';
-import DeletePrivilegeMutation from 'ember-amsel/gql/privileges/delete-privilege.graphql';
-import OrderUpPrivilegeMutation from 'ember-amsel/gql/privileges/order-up-privilege.graphql';
-import OrderDownPrivilegeMutation from 'ember-amsel/gql/privileges/order-down-privilege.graphql';
-import ApolloService from 'ember-amsel/services/apollo';
-import Recorder, { RecordType } from 'ember-amsel/services/recorder';
+import { Privilege, UpdatePrivilegeInput } from 'greenlight-frontend/gql/types';
+import getPrivilegesQuery from 'greenlight-frontend/gql/privileges/get-privileges.graphql';
+import UpdatePrivilegeMutation from 'greenlight-frontend/gql/privileges/update-privilege.graphql';
+import DeletePrivilegeMutation from 'greenlight-frontend/gql/privileges/delete-privilege.graphql';
+import OrderUpPrivilegeMutation from 'greenlight-frontend/gql/privileges/order-up-privilege.graphql';
+import OrderDownPrivilegeMutation from 'greenlight-frontend/gql/privileges/order-down-privilege.graphql';
+import ApolloService from 'greenlight-frontend/services/apollo';
+import Recorder, { RecordType } from 'greenlight-frontend/services/recorder';
 
 export default class DataPrivilege extends Service.extend({
   // anything which *must* be merged to prototype here

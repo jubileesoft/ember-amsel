@@ -2,9 +2,9 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
-import addAppMutation from 'ember-amsel/gql/apps/addApp.graphql';
-import getAppsQuery from 'ember-amsel/gql/apps/get-apps.graphql';
-import { AddAppInput, App } from 'ember-amsel/gql/types';
+import addAppMutation from 'greenlight-frontend/gql/apps/addApp.graphql';
+import getAppsQuery from 'greenlight-frontend/gql/apps/get-apps.graphql';
+import { AddAppInput, App } from 'greenlight-frontend/gql/types';
 import Type from 'ember__routing';
 
 export default class ProtectedAdminAppsNew extends Controller.extend({
